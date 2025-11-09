@@ -1,0 +1,12 @@
+package com.fidenz.weatherapp.dto;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
+
+import java.util.List;
+
+@Data
+public class CitiesListDto {
+    @JsonProperty("List")
+    private List<CityDto> list;
+}
