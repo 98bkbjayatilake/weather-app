@@ -54,8 +54,7 @@ npm run dev
 3. Login with:
    - Email: `careers@fidenz.com`
    - Password: `Pass#fidenz`
-4. Complete MFA (check email)
-5. Browse cities and view weather!
+4. Browse cities and view weather!
 
 ## Troubleshooting
 
@@ -64,8 +63,6 @@ npm run dev
 **Frontend won't start**: Run `npm install` again and check Node version (`node -v`)
 
 **Can't login**: Verify Auth0 credentials in .env files match your Auth0 dashboard
-
-**MFA code not received**: Check spam folder or resend from Auth0 dashboard
 
 
 ## Project Structure
@@ -82,7 +79,6 @@ spring-boot-react-app/
 ## Key Features
 
 ✅ Secure Auth0 authentication
-✅ Multi-Factor Authentication via email
 ✅ Protected API endpoints
 ✅ Protected React routes
 ✅ Disabled public signups

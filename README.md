@@ -5,7 +5,6 @@ A secure weather application built with Spring Boot backend and React frontend, 
 ## 🌟 Features
 
 - **Secure Authentication**: Auth0 integration with OAuth 2.0
-- **Multi-Factor Authentication (MFA)**: Email verification for enhanced security
 - **Protected Routes**: API endpoints and pages accessible only to authenticated users
 - **City Weather Information**: Browse cities and view real-time weather data
 - **Restricted Signups**: Only pre-registered users can access the application
@@ -82,10 +81,9 @@ The frontend will start on `http://localhost:3000`
 1. Open `http://localhost:3000` in your browser
 2. Click **Login to Continue**
 3. Enter the test credentials
-4. Complete MFA if prompted (check email)
-5. You should be redirected to the Cities page
-6. Click on any city to view its weather information
-7. Test the logout functionality
+4. You should be redirected to the Cities page
+5. Click on any city to view its weather information
+6. Test the logout functionality
 
 ### Testing Protected Routes
 1. Try accessing `http://localhost:3000/cities` without logging in - you should be redirected to the landing page
@@ -106,17 +104,12 @@ The frontend will start on `http://localhost:3000`
 - **Protected API endpoints** requiring valid access tokens
 - **Protected React routes** redirecting unauthenticated users
 
-### 2. Multi-Factor Authentication (MFA)
-- **Email-based MFA** enabled in Auth0
-- Additional security layer for user accounts
-- Configurable MFA policies (Always, Adaptive, or Optional)
-
-### 3. Restricted Signups
+### 2. Restricted Signups
 - **Disabled public registration** in Auth0
 - Only administrators can create user accounts
 - Pre-registered users only can access the application
 
-### 4. CORS Configuration
+### 3. CORS Configuration
 - **Restricted origins** to prevent unauthorized access
 - Configured for localhost development
 - Easily configurable for production domains
