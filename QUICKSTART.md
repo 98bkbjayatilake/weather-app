@@ -10,18 +10,24 @@ This guide will help you get the Weather App up and running quickly.
 
 ## Quick Setup (5 minutes)
 
-### 1. Backend Setup (1 minute)
+### 1. Add Configuration Files
+1. Download & extract the Git repository.
+2. Download the configuration files from [here](https://drive.google.com/file/d/1P-e4TNbSVUplRgjVZoWcbHlVLrmn6r5r/view?usp=sharing)
+3. Extract the `.zip` file, then place the `.env` files, `application.yml` file & `cities.json` file in the correct locations inside the project:
+
+   | file in `.zip`            | project location                             | 
+      |---------------------------|----------------------------------------------| 
+   | `backend/.env`            | `backend/.env`                               |
+   | `backend/application.yml` | `backend/src/main/resources/application.yml` |
+   | `backend/cities.json`     | `backend/src/main/resources/cities.json`     |
+   | `frontend/.env`           | `frontend/.env`                              |
+
+
+
+### 2. Backend Setup (1 minute)
 
 ```bash
 cd backend
-cp .env.example .env
-```
-
-Edit `.env`:
-```properties
-AUTH0_DOMAIN=your-tenant.auth0.com
-AUTH0_AUDIENCE=https://weather-app-api
-AUTH0_ISSUER_URI=https://your-tenant.auth0.com/
 ```
 
 Run:
@@ -34,14 +40,6 @@ mvn spring-boot:run
 ```bash
 cd frontend
 npm install
-cp .env.example .env
-```
-
-Edit `.env`:
-```properties
-VITE_AUTH0_DOMAIN=your-tenant.auth0.com
-VITE_AUTH0_CLIENT_ID=your-client-id
-VITE_AUTH0_AUDIENCE=https://weather-app-api
 ```
 
 Run:

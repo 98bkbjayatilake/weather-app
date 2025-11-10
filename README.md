@@ -21,28 +21,27 @@ A secure weather application built with Spring Boot backend and React frontend, 
 
 ## 🚀 Getting Started
 
-### Step 1: Backend Setup
+### Step 1: Add Configuration Files
+1. Download & extract the Git repository.
+2. Download the configuration files from [here](https://drive.google.com/file/d/1P-e4TNbSVUplRgjVZoWcbHlVLrmn6r5r/view?usp=sharing)
+3. Extract the `.zip` file, then place the `.env` files, `application.yml` file & `cities.json` file in the correct locations inside the project:
 
-#### 1.1 Configure Environment Variables
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
+   | file in `.zip`            | project location                             | 
+   |---------------------------|----------------------------------------------| 
+   | `backend/.env`            | `backend/.env`                               |
+   | `backend/application.yml` | `backend/src/main/resources/application.yml` |
+   | `backend/cities.json`     | `backend/src/main/resources/cities.json`     |
+   | `frontend/.env`           | `frontend/.env`                              |
 
-2. Copy the example environment file:
-   ```bash
-   cp .env.example .env
-   ```
 
-3. Edit the `.env` file with your Auth0 credentials:
-   ```properties
-   AUTH0_DOMAIN=your-tenant.auth0.com
-   AUTH0_AUDIENCE=https://weather-app-api
-   AUTH0_ISSUER_URI=https://your-tenant.auth0.com/
-   WEATHER_API_KEY=your-openweathermap-api-key (optional)
-   ```
+### Step 2: Backend Setup
 
-#### 1.2 Build and Run the Backend
+#### 2.1 Build and Run the Backend
+Navigate to the backend directory:
+```bash
+cd backend
+```
+Build and run the backend
 ```bash
 # Build the project
 mvn clean install
@@ -53,9 +52,9 @@ mvn spring-boot:run
 
 The backend will start on `http://localhost:8080`
 
-### Step 2: Frontend Setup
+### Step 3: Frontend Setup
 
-#### 2.1 Install Dependencies
+#### 3.1 Install Dependencies
 1. Navigate to the frontend directory:
    ```bash
    cd frontend
@@ -66,21 +65,7 @@ The backend will start on `http://localhost:8080`
    npm install
    ```
 
-#### 2.2 Configure Environment Variables
-1. Copy the example environment file:
-   ```bash
-   cp .env.example .env
-   ```
-
-2. Edit the `.env` file with your Auth0 credentials:
-   ```properties
-   VITE_AUTH0_DOMAIN=your-tenant.auth0.com
-   VITE_AUTH0_CLIENT_ID=your-client-id-from-auth0
-   VITE_AUTH0_AUDIENCE=https://weather-app-api
-   VITE_API_BASE_URL=http://localhost:8080
-   ```
-
-#### 2.3 Run the Frontend
+#### 3.2 Run the Frontend
 ```bash
 npm run dev
 ```
